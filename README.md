@@ -4,8 +4,6 @@
 
 Client infrastructure décrit par le code l'infrastructure à provisioner pour le bon fonctionnement du client de la cartographie nationale.
 
-Les déploiements sont opérés par [cette organisation dans Terraform Cloud](https://app.terraform.io/app/cartographie-nationale/workspaces) et agit sur tout espace de travail avec le préfixe `client-`.
-
 ## Table des matières
 
 - [À propos](#à-propos)
@@ -29,12 +27,18 @@ Pour que les modifications de la description de l'infrastructure soient appliqu�
 
 #### CI
 
-- [Github Actions](https://docs.github.com/en/actions)
+- [Github Actions](https://docs.github.com/en/actions) est l'outil d'intégration et de déploiement continue intégré à GitHub.
+  - L'historique des déploiements est disponible [sous l'onglet Actions](https://github.com/anct-cartographie-nationale/client-infrastructure/actions/) 
 
 #### Déploiement
 
-- [Terraform Cloud](https://www.clever-cloud.com/)
-- [AWS](https://aws.amazon.com/)
+- [Terraform Cloud](https://www.clever-cloud.com/) est la plateforme proposée par HasiCorp pour administrer les modifications d'infrastructure.
+  - Organisation : [cartographie-nationale](https://app.terraform.io/app/cartographie-nationale/workspaces)
+  - Workspaces : `client-*`
+    - [client-production](https://app.terraform.io/app/cartographie-nationale/workspaces/client-production)
+- [AWS](https://aws.amazon.com/) est la plateforme de services Cloud proposée par Amazon.
+  - Utilisateur : `cartographie-nationale.client.infrastructure`
+  - Groupe : `client-deployer`
 
 ## Licence
 
