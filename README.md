@@ -9,6 +9,7 @@ Client infrastructure décrit par le code l'infrastructure à provisioner pour l
 - [À propos](#à-propos)
 - [Prérequis](#prérequis)
 - [Installation](#installation)
+- [Utilisation](#utilisation)
 - [Contribution](#contribution)
 - [Construit avec](#construit-avec)
 - [Licence](#licence)
@@ -30,6 +31,38 @@ alias terraform='docker run --rm -it --name terraform -v ~/:/root/ -v $(pwd):/wo
 ```
 
 Avec cet alias, il n'y a plus de différence entre une commande terraform exécutée avec Docker ou avec Terraform CLI.
+
+## Utilisation
+
+### Vérifier et corriger la syntaxe des fichiers `.tf`
+
+```shell
+terraform fmt
+```
+
+### Vérifier la cohérence de l'infrastructure
+
+```shell
+terraform validate
+```
+
+### Récupérer un jeton d'authentification à Terraform Cloud en local
+
+```shell
+terraform login
+```
+
+### Initialiser l'état et les plugins en local
+
+```shell
+terraform init
+```
+
+### Planifier une exécution pour voir les différences avec l'état précédent de l'infrastructure
+
+```shell
+terraform plan
+```
 
 ## Contribution
 
