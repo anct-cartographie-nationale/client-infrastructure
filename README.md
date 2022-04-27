@@ -7,9 +7,29 @@ Client infrastructure décrit par le code l'infrastructure à provisioner pour l
 ## Table des matières
 
 - [À propos](#à-propos)
+- [Prérequis](#prérequis)
+- [Installation](#installation)
 - [Contribution](#contribution)
 - [Construit avec](#construit-avec)
 - [Licence](#licence)
+
+## Prérequis
+
+- [Docker](https://www.docker.com/) ou [Terraform CLI](https://www.terraform.io/cli)
+
+## Installation
+
+La commande suivante permet d'utiliser la ligne de commande de terraform via Docker :
+```shell
+docker run --rm -it --name terraform -v ~/:/root/ -v $(pwd):/workspace -w /workspace hashicorp/terraform:light
+```
+
+Pour une utilisation simplifiée, il est possible de créer un alias :
+```shell
+alias terraform='docker run --rm -it --name terraform -v ~/:/root/ -v $(pwd):/workspace -w /workspace hashicorp/terraform:light'
+```
+
+Avec cet alias, il n'y a plus de différence entre une commande terraform exécutée avec Docker ou avec Terraform CLI.
 
 ## Contribution
 
@@ -29,6 +49,8 @@ Pour que les modifications de la description de l'infrastructure soient appliqu�
 
 - [Github Actions](https://docs.github.com/en/actions) est l'outil d'intégration et de déploiement continue intégré à GitHub.
   - L'historique des déploiements est disponible [sous l'onglet Actions](https://github.com/anct-cartographie-nationale/client-infrastructure/actions/) 
+- Secrets du dépôt :
+  - `TF_API_TOKEN` : Le token d'api Terraform Cloud de l'équipe Cartographie Nationale qui permet à la CI d'opérer des actions sur Terraform Cloud
 
 #### Déploiement
 
