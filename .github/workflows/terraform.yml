@@ -21,6 +21,8 @@ jobs:
       - name: Terraform Init
         id: init
         run: terraform init
+        env:
+          TF_WORKSPACE: production
       - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
