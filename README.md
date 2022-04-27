@@ -2,7 +2,7 @@
 
 ## À propos
 
-Client infrastructure décrit par le code l'infrastructure à provisioner pour le bon fonctionnement du client de la cartographie nationale.
+Client infrastructure décrit par le code l'infrastructure à provisioner pour le bon fonctionnement du [client de la cartographie nationale](https://github.com/anct-cartographie-nationale/client).
 
 ## Table des matières
 
