@@ -2,17 +2,17 @@
 
 ## À propos
 
-Client infrastructure décrit par le code l'infrastructure à provisioner pour le bon fonctionnement du [client de la cartographie nationale](https://github.com/anct-cartographie-nationale/client).
+Client infrastructure décrit par le code l'infrastructure à provisionner pour le bon fonctionnement du [client de la cartographie nationale](https://github.com/anct-cartographie-nationale/client).
 
 ## Table des matières
 
-- [À propos](#à-propos)
-- [Prérequis](#prérequis)
-- [Installation](#installation)
-- [Utilisation](#utilisation)
-- [Contribution](#contribution)
-- [Construit avec](#construit-avec)
-- [Licence](#licence)
+- 🪧 [À propos](#à-propos)
+- 📦 [Prérequis](#prérequis)
+- 🚀 [Installation](#installation)
+- 🛠️ [Utilisation](#utilisation)
+- 🤝 [Contribution](#contribution)
+- 🏗️ [Construit avec](#construit-avec)
+- 📝 [Licence](#licence)
 
 ## Prérequis
 
@@ -20,7 +20,7 @@ Client infrastructure décrit par le code l'infrastructure à provisioner pour l
 
 ## Installation
 
-La commande suivante permet d'utiliser la ligne de commande de terraform via Docker :
+La commande suivante permet d'utiliser la ligne de commande terraform via Docker :
 ```shell
 docker run --rm -it --name terraform -v ~/:/root/ -v $(pwd):/workspace -w /workspace hashicorp/terraform:light
 ```
@@ -80,8 +80,8 @@ Pour que les modifications de la description de l'infrastructure soient appliqu�
 
 #### CI
 
-- [Github Actions](https://docs.github.com/en/actions) est l'outil d'intégration et de déploiement continue intégré à GitHub
-  - L'historique des déploiements est disponible [sous l'onglet Actions](https://github.com/anct-cartographie-nationale/client-infrastructure/actions/) 
+- [Github Actions](https://docs.github.com/en/actions) est l'outil d'intégration et de déploiement continu intégré à GitHub
+  - L'historique des déploiements est disponible [sous l'onglet Actions](https://github.com/anct-cartographie-nationale/client-infrastructure/actions/)
 - Secrets du dépôt :
   - `TF_API_TOKEN` : Le token d'api Terraform Cloud de l'équipe Cartographie Nationale qui permet à la CI d'opérer des actions sur Terraform Cloud
 
@@ -97,4 +97,4 @@ Pour que les modifications de la description de l'infrastructure soient appliqu�
 
 ## Licence
 
-Voir le fichier [LICENSE](./LICENSE.md) du dépôt.
+Voir le fichier [LICENSE.md](./LICENSE.md) du dépôt.
