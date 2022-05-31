@@ -4,6 +4,8 @@
 
 Client infrastructure décrit par le code l'infrastructure à provisionner pour le bon fonctionnement du [client de la cartographie nationale](https://github.com/anct-cartographie-nationale/client).
 
+> Ce dépôt n'est pas utile pour faire fonctionner la Cartographie Nationale en local.
+
 ## Table des matières
 
 - 🪧 [À propos](#à-propos)
