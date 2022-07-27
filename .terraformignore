@@ -1,5 +1,4 @@
 .git/
-.gitlab/
-.gitlab-ci.yml
+.github/
 .gitignore
 .terraformrc
