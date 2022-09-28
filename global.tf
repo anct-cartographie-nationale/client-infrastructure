@@ -1,10 +1,10 @@
 locals {
   product_information = {
     context : {
-      project    = "cartographie_nationale"
+      project    = "average"
       layer      = "infrastructure"
       service    = "client"
-      start_date = "2022-04-01"
+      start_date = "2022-09-28"
       end_date   = "unknown"
     }
     purpose : {
@@ -12,14 +12,14 @@ locals {
       service_class     = "bronze"
     }
     organization : {
-      client = "anct"
+      client = "average"
     }
     stakeholders : {
-      business_owner  = "celestin.leroux@beta.gouv.fr"
-      technical_owner = "marc.gavanier@beta.gouv.fr"
-      approver        = "marc.gavanier@beta.gouv.fr"
+      business_owner  = "xavier.norris"
+      technical_owner = "romain.cambonie@gmail.com"
+      approver        = "romain.cambonie@gmail.com"
       creator         = "terraform"
-      team            = "cartographie-nationale"
+      team            = "average"
     }
   }
 }

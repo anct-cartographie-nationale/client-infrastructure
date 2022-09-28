@@ -1,10 +1,8 @@
 # Client infrastructure
 
 ## À propos
-
-Client infrastructure décrit par le code l'infrastructure à provisionner pour le bon fonctionnement du [client de la cartographie nationale](https://github.com/anct-cartographie-nationale/client).
-
-> Ce dépôt n'est pas utile pour faire fonctionner la Cartographie Nationale en local.
+Average Client Infrastructure décrit par le code l'infrastructure à provisionner pour le bon fonctionnement [d'Average](https://github.com/romain-cambonie/average-client).
+> Ce dépôt n'est pas utile pour faire fonctionner Average en local.
 
 ## Table des matières
 
@@ -66,16 +64,9 @@ terraform init
 terraform plan
 ```
 
-## Contribution
-
-### Appliquer la mise à jour de l'infrastructure
-
-Pour que les modifications de la description de l'infrastructure soient appliquées en production, il suffit de publier les changements sur la branche `main`.
-
 ## Construit avec
 
 ### Langages & Frameworks
-
 - [Terraform](https://www.terraform.io/) est un outil de description d'infrastructure par le code qui permet de créer et de maintenir une infrastructure de manière sûre et prévisible
 
 ### Outils
@@ -85,18 +76,12 @@ Pour que les modifications de la description de l'infrastructure soient appliqu�
 - [Github Actions](https://docs.github.com/en/actions) est l'outil d'intégration et de déploiement continu intégré à GitHub
   - L'historique des déploiements est disponible [sous l'onglet Actions](https://github.com/anct-cartographie-nationale/client-infrastructure/actions/)
 - Secrets du dépôt :
-  - `TF_API_TOKEN` : Le token d'api Terraform Cloud de l'équipe Cartographie Nationale qui permet à la CI d'opérer des actions sur Terraform Cloud
+  - `TF_API_TOKEN` : Le token d'api Terraform Cloud qui permet à la CI d'opérer des actions sur Terraform Cloud
 
 #### Déploiement
-
-- [Terraform Cloud](https://www.clever-cloud.com/) est la plateforme proposée par HasiCorp pour administrer les modifications d'infrastructure
-  - Organisation : [cartographie-nationale](https://app.terraform.io/app/cartographie-nationale/workspaces)
-  - Workspaces : `client-*`
-    - [client-production](https://app.terraform.io/app/cartographie-nationale/workspaces/client-production)
+- [Terraform Cloud](https://www.terraform.io/cloud-docs) est la plateforme proposée par HasiCorp pour administrer les modifications d'infrastructure
 - [AWS](https://aws.amazon.com/) est la plateforme de services Cloud proposée par Amazon.
-  - Utilisateur : `cartographie-nationale.client.infrastructure`
-  - Groupe : `client.deployer`
 
 ## Licence
 
-Voir le fichier [LICENSE.md](./LICENSE.md) du dépôt.
+Voir le fichier [LICENSE.md](./doc/LICENSE.md) du dépôt.
