@@ -1,9 +1,8 @@
 locals {
   product_information = {
     context : {
-      project    = "cartographie_nationale"
-      layer      = "infrastructure"
-      service    = "client"
+      product    = var.product
+      service    = var.service
       start_date = "2022-04-01"
       end_date   = "unknown"
     }
@@ -25,7 +24,6 @@ locals {
 }
 
 locals {
-  projectTitle = title(replace(local.product_information.context.project, "_", " "))
-  layerTitle   = title(replace(local.product_information.context.layer, "_", " "))
+  productTitle = title(replace(local.product_information.context.product, "_", " "))
   serviceTitle = title(replace(local.product_information.context.service, "_", " "))
 }

@@ -2,8 +2,7 @@ data "aws_caller_identity" "current_iam" {}
 
 locals {
   tags = {
-    context-project                   = local.product_information.context.project
-    context-layer                     = local.product_information.context.layer
+    context-project                   = local.product_information.context.product
     context-service                   = local.product_information.context.service
     context-start_date                = local.product_information.context.start_date
     context-end_date                  = local.product_information.context.end_date
