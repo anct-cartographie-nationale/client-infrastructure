@@ -11,3 +11,10 @@ variable "service" {
   description = "The name of the service that will be run on the environment"
   default     = "client"
 }
+
+variable "enable_bucket_website" {
+  type        = bool
+  nullable    = false
+  description = "Whether to provide an S3 bucket website configuration"
+  default     = false
+}
