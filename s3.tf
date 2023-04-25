@@ -22,6 +22,16 @@ resource "aws_s3_bucket_website_configuration" "client_website" {
   }
 }
 
+resource "aws_s3_bucket_public_access_block" "example" {
+  count  = var.enable_bucket_website ? 1 : 0
+  bucket = aws_s3_bucket.client.id
+
+  block_public_acls       = false
+  block_public_policy     = false
+  ignore_public_acls      = false
+  restrict_public_buckets = false
+}
+
 resource "aws_s3_bucket_policy" "allow_client_website_access_from_internet" {
   count  = var.enable_bucket_website ? 1 : 0
   bucket = aws_s3_bucket.client.id
