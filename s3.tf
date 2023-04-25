@@ -41,7 +41,7 @@ resource "aws_s3_bucket_public_access_block" "client_website_bucket_public_acces
 }
 
 resource "aws_s3_bucket_acl" "client_website_bucket_acl" {
-  count  = var.enable_bucket_website ? 1 : 0
+  count = var.enable_bucket_website ? 1 : 0
   depends_on = [
     aws_s3_bucket_ownership_controls.client_website_bucket_ownership,
     aws_s3_bucket_public_access_block.client_website_bucket_public_access,
